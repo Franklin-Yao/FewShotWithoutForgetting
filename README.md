@@ -7,9 +7,8 @@ conda install torchvision
 ```
 Remember not to install cuda90 which may not work.
 For the version of pytorch 1.2.0 and python 3.7, plz check:
-hhttps://github.com/xcmax/FewShotWithoutForgetting_pytorch1.2
+https://github.com/xcmax/FewShotWithoutForgetting_pytorch1.2
 
-## Dynamic Few-Shot Visual Learning without Forgetting*
 
 ### Introduction
 
