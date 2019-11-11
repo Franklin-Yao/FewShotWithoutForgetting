@@ -1,4 +1,13 @@
-# *Dynamic Few-Shot Visual Learning without Forgetting*
+### This is a modified version of https://github.com/gidariss/FewShotWithoutForgetting
+Several bugs are fixed. This is tested on RTX 2080Ti.
+To run this code, run the following command:
+```
+conda install python=2.7 pytorch=0.4.1 cuda92 -c pytorch
+conda install torchvision
+```
+Remember not to install cuda90 which may not work.
+
+## Dynamic Few-Shot Visual Learning without Forgetting*
 
 ### Introduction
 
