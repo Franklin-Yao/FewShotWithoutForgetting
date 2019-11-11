@@ -1,0 +1,20 @@
+2019-11-11 08:25:33,600 - algorithms.Algorithm - INFO   - Algorithm options {'max_num_epochs': 60, 'disp_step': 200, 'algorithm_type': 'FewShot', 'criterions': {'loss': {'opt': None, 'ctype': 'CrossEntropyLoss'}}, 'data_test_opt': {'nKnovel': 5, 'batch_size': 1, 'epoch_size': 2000, 'nExemplars': 1, 'nTestBase': 75, 'nKbase': 64, 'nTestNovel': 75}, 'exp_dir': './experiments/miniImageNet_Conv32CosineClassifier', 'networks': {'feat_model': {'opt': {'userelu': False, 'in_planes': 3, 'out_planes': [32, 32, 32, 32], 'num_stages': 4}, 'def_file': 'architectures/ConvNet.py', 'optim_params': {'LUT_lr': [(20, 0.1), (40, 0.006), (50, 0.0012), (60, 0.00024)], 'nesterov': True, 'optim_type': 'sgd', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}, 'pretrained': None}, 'classifier': {'opt': {'weight_generator_type': 'none', 'scale_cls': 10, 'nFeat': 800, 'classifier_type': 'cosine', 'nKall': 64}, 'def_file': 'architectures/ClassifierWithFewShotGenerationModule.py', 'optim_params': {'LUT_lr': [(20, 0.1), (40, 0.006), (50, 0.0012), (60, 0.00024)], 'nesterov': True, 'optim_type': 'sgd', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}, 'pretrained': None}}, 'data_train_opt': {'nKnovel': 0, 'batch_size': 8, 'epoch_size': 8000, 'nExemplars': 0, 'nTestBase': 32, 'nKbase': 64, 'nTestNovel': 0}}
+2019-11-11 08:25:33,600 - algorithms.Algorithm - INFO   - Set network feat_model
+2019-11-11 08:25:33,600 - algorithms.Algorithm - INFO   - ==> Initiliaze network feat_model from file architectures/ConvNet.py with opts: {'userelu': False, 'in_planes': 3, 'out_planes': [32, 32, 32, 32], 'num_stages': 4}
+2019-11-11 08:25:33,605 - algorithms.Algorithm - INFO   - Set network classifier
+2019-11-11 08:25:33,605 - algorithms.Algorithm - INFO   - ==> Initiliaze network classifier from file architectures/ClassifierWithFewShotGenerationModule.py with opts: {'weight_generator_type': 'none', 'scale_cls': 10, 'nFeat': 800, 'classifier_type': 'cosine', 'nKall': 64}
+2019-11-11 08:25:33,606 - algorithms.Algorithm - INFO   - Initialize criterion[loss]: CrossEntropyLoss with options: None
+2019-11-11 08:25:36,051 - algorithms.Algorithm - INFO   - Initialize optimizer: sgd with params: {'LUT_lr': [(20, 0.1), (40, 0.006), (50, 0.0012), (60, 0.00024)], 'nesterov': True, 'optim_type': 'sgd', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9} for netwotk: feat_model
+2019-11-11 08:25:36,052 - algorithms.Algorithm - INFO   - Initialize optimizer: sgd with params: {'LUT_lr': [(20, 0.1), (40, 0.006), (50, 0.0012), (60, 0.00024)], 'nesterov': True, 'optim_type': 'sgd', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9} for netwotk: classifier
+2019-11-11 08:25:36,052 - algorithms.Algorithm - INFO   - Training epoch [  1 /  60]
+2019-11-11 08:25:36,052 - algorithms.Algorithm - INFO   - ==> Set to feat_model optimizer lr = 0.1000000000
+2019-11-11 08:25:36,052 - algorithms.Algorithm - INFO   - ==> Set to classifier optimizer lr = 0.1000000000
+2019-11-11 08:25:36,052 - algorithms.Algorithm - INFO   - Training: miniImageNet_Conv32CosineClassifier
+2019-11-11 08:25:42,226 - algorithms.Algorithm - INFO   - ==> Iteration [  1][ 200 / 1000]: {}
+2019-11-11 08:25:48,241 - algorithms.Algorithm - INFO   - ==> Iteration [  1][ 400 / 1000]: {}
+2019-11-11 08:25:54,282 - algorithms.Algorithm - INFO   - ==> Iteration [  1][ 600 / 1000]: {}
+2019-11-11 08:26:00,356 - algorithms.Algorithm - INFO   - ==> Iteration [  1][ 800 / 1000]: {}
+2019-11-11 08:26:06,453 - algorithms.Algorithm - INFO   - ==> Iteration [  1][1000 / 1000]: {}
+2019-11-11 08:26:06,477 - algorithms.Algorithm - INFO   - ==> Training stats: {}
+2019-11-11 08:26:06,553 - algorithms.Algorithm - INFO   - Evaluating: miniImageNet_Conv32CosineClassifier
+2019-11-11 08:26:06,553 - algorithms.Algorithm - INFO   - ==> Dataset: MiniImageNet_val [2000 batches]

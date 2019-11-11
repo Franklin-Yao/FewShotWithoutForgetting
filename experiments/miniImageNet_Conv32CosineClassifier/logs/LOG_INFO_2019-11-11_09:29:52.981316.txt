@@ -1,0 +1,80 @@
+2019-11-11 09:29:52,981 - algorithms.Algorithm - INFO   - Algorithm options {'max_num_epochs': 60, 'disp_step': 200, 'algorithm_type': 'FewShot', 'criterions': {'loss': {'opt': None, 'ctype': 'CrossEntropyLoss'}}, 'data_test_opt': {'nKnovel': 5, 'batch_size': 1, 'epoch_size': 2000, 'nExemplars': 1, 'nTestBase': 75, 'nKbase': 64, 'nTestNovel': 75}, 'exp_dir': './experiments/miniImageNet_Conv32CosineClassifier', 'networks': {'feat_model': {'opt': {'userelu': False, 'in_planes': 3, 'out_planes': [32, 32, 32, 32], 'num_stages': 4}, 'def_file': 'architectures/ConvNet.py', 'optim_params': {'LUT_lr': [(20, 0.1), (40, 0.006), (50, 0.0012), (60, 0.00024)], 'nesterov': True, 'optim_type': 'sgd', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}, 'pretrained': None}, 'classifier': {'opt': {'weight_generator_type': 'none', 'scale_cls': 10, 'nFeat': 800, 'classifier_type': 'cosine', 'nKall': 64}, 'def_file': 'architectures/ClassifierWithFewShotGenerationModule.py', 'optim_params': {'LUT_lr': [(20, 0.1), (40, 0.006), (50, 0.0012), (60, 0.00024)], 'nesterov': True, 'optim_type': 'sgd', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}, 'pretrained': None}}, 'data_train_opt': {'nKnovel': 0, 'batch_size': 8, 'epoch_size': 8000, 'nExemplars': 0, 'nTestBase': 32, 'nKbase': 64, 'nTestNovel': 0}}
+2019-11-11 09:29:52,981 - algorithms.Algorithm - INFO   - Set network feat_model
+2019-11-11 09:29:52,981 - algorithms.Algorithm - INFO   - ==> Initiliaze network feat_model from file architectures/ConvNet.py with opts: {'userelu': False, 'in_planes': 3, 'out_planes': [32, 32, 32, 32], 'num_stages': 4}
+2019-11-11 09:29:52,985 - algorithms.Algorithm - INFO   - Set network classifier
+2019-11-11 09:29:52,985 - algorithms.Algorithm - INFO   - ==> Initiliaze network classifier from file architectures/ClassifierWithFewShotGenerationModule.py with opts: {'weight_generator_type': 'none', 'scale_cls': 10, 'nFeat': 800, 'classifier_type': 'cosine', 'nKall': 64}
+2019-11-11 09:29:52,986 - algorithms.Algorithm - INFO   - Initialize criterion[loss]: CrossEntropyLoss with options: None
+2019-11-11 09:29:55,451 - algorithms.Algorithm - INFO   - Initialize optimizer: sgd with params: {'LUT_lr': [(20, 0.1), (40, 0.006), (50, 0.0012), (60, 0.00024)], 'nesterov': True, 'optim_type': 'sgd', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9} for netwotk: feat_model
+2019-11-11 09:29:55,451 - algorithms.Algorithm - INFO   - Initialize optimizer: sgd with params: {'LUT_lr': [(20, 0.1), (40, 0.006), (50, 0.0012), (60, 0.00024)], 'nesterov': True, 'optim_type': 'sgd', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9} for netwotk: classifier
+2019-11-11 09:29:55,451 - algorithms.Algorithm - INFO   - Training epoch [  1 /  60]
+2019-11-11 09:29:55,452 - algorithms.Algorithm - INFO   - ==> Set to feat_model optimizer lr = 0.1000000000
+2019-11-11 09:29:55,452 - algorithms.Algorithm - INFO   - ==> Set to classifier optimizer lr = 0.1000000000
+2019-11-11 09:29:55,452 - algorithms.Algorithm - INFO   - Training: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:30:01,732 - algorithms.Algorithm - INFO   - ==> Iteration [  1][ 200 / 1000]: {}
+2019-11-11 09:30:07,973 - algorithms.Algorithm - INFO   - ==> Iteration [  1][ 400 / 1000]: {}
+2019-11-11 09:30:14,040 - algorithms.Algorithm - INFO   - ==> Iteration [  1][ 600 / 1000]: {}
+2019-11-11 09:30:20,126 - algorithms.Algorithm - INFO   - ==> Iteration [  1][ 800 / 1000]: {}
+2019-11-11 09:30:26,199 - algorithms.Algorithm - INFO   - ==> Iteration [  1][1000 / 1000]: {}
+2019-11-11 09:30:26,228 - algorithms.Algorithm - INFO   - ==> Training stats: {}
+2019-11-11 09:30:26,306 - algorithms.Algorithm - INFO   - Evaluating: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:30:26,306 - algorithms.Algorithm - INFO   - ==> Dataset: MiniImageNet_val [2000 batches]
+2019-11-11 09:31:24,051 - algorithms.Algorithm - INFO   - ==> Results: {'loss': 3.0954, 'AccuracyNovel_cnf': 0.3898}
+2019-11-11 09:31:24,051 - algorithms.Algorithm - INFO   - ==> Evaluation stats: {'loss': 3.0954, 'AccuracyNovel_cnf': 0.3898}
+2019-11-11 09:31:24,058 - algorithms.Algorithm - INFO   - ==> Best results w.r.t. AccuracyNovel_cnf metric: epoch: 1 - {'loss': 3.0954, 'AccuracyNovel_cnf': 0.3898}
+2019-11-11 09:31:24,058 - algorithms.Algorithm - INFO   - Training epoch [  2 /  60]
+2019-11-11 09:31:24,058 - algorithms.Algorithm - INFO   - ==> Set to feat_model optimizer lr = 0.1000000000
+2019-11-11 09:31:24,059 - algorithms.Algorithm - INFO   - ==> Set to classifier optimizer lr = 0.1000000000
+2019-11-11 09:31:24,059 - algorithms.Algorithm - INFO   - Training: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:31:30,357 - algorithms.Algorithm - INFO   - ==> Iteration [  2][ 200 / 1000]: {}
+2019-11-11 09:31:36,527 - algorithms.Algorithm - INFO   - ==> Iteration [  2][ 400 / 1000]: {}
+2019-11-11 09:31:42,890 - algorithms.Algorithm - INFO   - ==> Iteration [  2][ 600 / 1000]: {}
+2019-11-11 09:31:49,306 - algorithms.Algorithm - INFO   - ==> Iteration [  2][ 800 / 1000]: {}
+2019-11-11 09:31:55,649 - algorithms.Algorithm - INFO   - ==> Iteration [  2][1000 / 1000]: {}
+2019-11-11 09:31:55,688 - algorithms.Algorithm - INFO   - ==> Training stats: {}
+2019-11-11 09:31:55,695 - algorithms.Algorithm - INFO   - Evaluating: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:31:55,695 - algorithms.Algorithm - INFO   - ==> Dataset: MiniImageNet_val [2000 batches]
+2019-11-11 09:32:52,841 - algorithms.Algorithm - INFO   - ==> Results: {'loss': 2.9704, 'AccuracyNovel_cnf': 0.402}
+2019-11-11 09:32:52,842 - algorithms.Algorithm - INFO   - ==> Evaluation stats: {'loss': 2.9704, 'AccuracyNovel_cnf': 0.402}
+2019-11-11 09:32:52,846 - algorithms.Algorithm - INFO   - ==> Best results w.r.t. AccuracyNovel_cnf metric: epoch: 2 - {'loss': 2.9704, 'AccuracyNovel_cnf': 0.402}
+2019-11-11 09:32:52,846 - algorithms.Algorithm - INFO   - Training epoch [  3 /  60]
+2019-11-11 09:32:52,846 - algorithms.Algorithm - INFO   - ==> Set to feat_model optimizer lr = 0.1000000000
+2019-11-11 09:32:52,846 - algorithms.Algorithm - INFO   - ==> Set to classifier optimizer lr = 0.1000000000
+2019-11-11 09:32:52,846 - algorithms.Algorithm - INFO   - Training: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:32:59,214 - algorithms.Algorithm - INFO   - ==> Iteration [  3][ 200 / 1000]: {}
+2019-11-11 09:33:05,706 - algorithms.Algorithm - INFO   - ==> Iteration [  3][ 400 / 1000]: {}
+2019-11-11 09:33:12,015 - algorithms.Algorithm - INFO   - ==> Iteration [  3][ 600 / 1000]: {}
+2019-11-11 09:33:18,591 - algorithms.Algorithm - INFO   - ==> Iteration [  3][ 800 / 1000]: {}
+2019-11-11 09:33:24,829 - algorithms.Algorithm - INFO   - ==> Iteration [  3][1000 / 1000]: {}
+2019-11-11 09:33:24,872 - algorithms.Algorithm - INFO   - ==> Training stats: {}
+2019-11-11 09:33:24,875 - algorithms.Algorithm - INFO   - Evaluating: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:33:24,875 - algorithms.Algorithm - INFO   - ==> Dataset: MiniImageNet_val [2000 batches]
+2019-11-11 09:34:22,370 - algorithms.Algorithm - INFO   - ==> Results: {'loss': 2.9154, 'AccuracyNovel_cnf': 0.4029}
+2019-11-11 09:34:22,371 - algorithms.Algorithm - INFO   - ==> Evaluation stats: {'loss': 2.9154, 'AccuracyNovel_cnf': 0.4029}
+2019-11-11 09:34:22,374 - algorithms.Algorithm - INFO   - ==> Best results w.r.t. AccuracyNovel_cnf metric: epoch: 3 - {'loss': 2.9154, 'AccuracyNovel_cnf': 0.4029}
+2019-11-11 09:34:22,374 - algorithms.Algorithm - INFO   - Training epoch [  4 /  60]
+2019-11-11 09:34:22,374 - algorithms.Algorithm - INFO   - ==> Set to feat_model optimizer lr = 0.1000000000
+2019-11-11 09:34:22,374 - algorithms.Algorithm - INFO   - ==> Set to classifier optimizer lr = 0.1000000000
+2019-11-11 09:34:22,374 - algorithms.Algorithm - INFO   - Training: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:34:28,742 - algorithms.Algorithm - INFO   - ==> Iteration [  4][ 200 / 1000]: {}
+2019-11-11 09:34:34,822 - algorithms.Algorithm - INFO   - ==> Iteration [  4][ 400 / 1000]: {}
+2019-11-11 09:34:40,957 - algorithms.Algorithm - INFO   - ==> Iteration [  4][ 600 / 1000]: {}
+2019-11-11 09:34:47,191 - algorithms.Algorithm - INFO   - ==> Iteration [  4][ 800 / 1000]: {}
+2019-11-11 09:34:53,351 - algorithms.Algorithm - INFO   - ==> Iteration [  4][1000 / 1000]: {}
+2019-11-11 09:34:53,395 - algorithms.Algorithm - INFO   - ==> Training stats: {}
+2019-11-11 09:34:53,399 - algorithms.Algorithm - INFO   - Evaluating: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:34:53,399 - algorithms.Algorithm - INFO   - ==> Dataset: MiniImageNet_val [2000 batches]
+2019-11-11 09:35:50,700 - algorithms.Algorithm - INFO   - ==> Results: {'loss': 2.7867, 'AccuracyNovel_cnf': 0.4148}
+2019-11-11 09:35:50,700 - algorithms.Algorithm - INFO   - ==> Evaluation stats: {'loss': 2.7867, 'AccuracyNovel_cnf': 0.4148}
+2019-11-11 09:35:50,703 - algorithms.Algorithm - INFO   - ==> Best results w.r.t. AccuracyNovel_cnf metric: epoch: 4 - {'loss': 2.7867, 'AccuracyNovel_cnf': 0.4148}
+2019-11-11 09:35:50,703 - algorithms.Algorithm - INFO   - Training epoch [  5 /  60]
+2019-11-11 09:35:50,703 - algorithms.Algorithm - INFO   - ==> Set to feat_model optimizer lr = 0.1000000000
+2019-11-11 09:35:50,703 - algorithms.Algorithm - INFO   - ==> Set to classifier optimizer lr = 0.1000000000
+2019-11-11 09:35:50,703 - algorithms.Algorithm - INFO   - Training: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:35:56,963 - algorithms.Algorithm - INFO   - ==> Iteration [  5][ 200 / 1000]: {}
+2019-11-11 09:36:03,002 - algorithms.Algorithm - INFO   - ==> Iteration [  5][ 400 / 1000]: {}
+2019-11-11 09:36:09,203 - algorithms.Algorithm - INFO   - ==> Iteration [  5][ 600 / 1000]: {}
+2019-11-11 09:36:15,418 - algorithms.Algorithm - INFO   - ==> Iteration [  5][ 800 / 1000]: {}
+2019-11-11 09:36:21,627 - algorithms.Algorithm - INFO   - ==> Iteration [  5][1000 / 1000]: {}
+2019-11-11 09:36:21,680 - algorithms.Algorithm - INFO   - ==> Training stats: {}
+2019-11-11 09:36:21,685 - algorithms.Algorithm - INFO   - Evaluating: miniImageNet_Conv32CosineClassifier
+2019-11-11 09:36:21,685 - algorithms.Algorithm - INFO   - ==> Dataset: MiniImageNet_val [2000 batches]
